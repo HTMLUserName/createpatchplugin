@@ -1,0 +1,40 @@
+<idea-plugin>
+    <id>cn.rino.plugin.createpatch</id>
+    <name>Create Patch</name>
+    <version>1.0</version>
+    <vendor email="nhl0821@163.com" url="">Rino Ning</vendor>
+
+    <description>
+        <![CDATA[
+            <h3>Used to create incremental project patches to facilitate incremental updates</h3><br/>
+            <h5>For specific instructions, please refer to the gtihub</h5><br/>
+            <a href='https://github.com/hlning/createpatchplugin'>how to use</a>
+        ]]>
+    </description>
+
+    <change-notes><![CDATA[
+        <ul>
+        	<li>1.1 Fix internal class export problem</li>
+            <li>1.0 Initial release of the plugin:Used to create project patches</li>
+        </ul>
+    ]]>
+    </change-notes>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0"/>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <action id="CreatePatcherAction" class="CreatePatcherAction" text="Create Patcher"
+                icon="MyPluginIcons.CREATE_PATCH">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="first"/>
+        </action>
+    </actions>
+</idea-plugin>
